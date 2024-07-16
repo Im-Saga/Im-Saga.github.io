@@ -1,8 +1,51 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
+    <title>MOOOOOOOOOOOOOOOOOOOOOOOOOOOO</title>
+
+</head>
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-    <p>My name is <strong>Ashe</strong></p>
+    <h1>Hello Moo</h1>
+    <img src="https://media1.tenor.com/m/_gfqfXAP08IAAAAC/polish-cow-cow.gif" alt="MOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO" style="width:498px;height:415px;">
+    </br>
+
+    <audio id="moo1" src="moo/moo1.mp3"></audio>
+    <audio id="moo2" src="moo/moo2.mp3"></audio>
+
+    <button onclick="playAudio()">BEGIN Mooing</button>
+
+
+
+
+
+    <script type="text/javascript">
+
+        let loopInterval;
+
+        function playAudio() {
+            var audio = document.getElementById("moo1");
+            audio.play();
+            setTimeout (function() {
+                console.log("sleeping");
+
+            }, 2000);
+
+            loopInterval = setInterval(function () {
+                console.log("looping");
+                var audio = new Audio(document.getElementById("moo2").src);
+                audio.play();
+            }, 5500);
+
+        }
+
+        function stopAudio() {
+            var audio = document.getElementById("moo1");
+            audio.pause();
+            //reset audio
+            audio.currentTime = 0;
+
+        }
+
+    </script>
 </body>
 </html>
