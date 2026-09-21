@@ -1,2 +1,8 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
 .vs/
-.vs\
+.env*
+!.env.example
